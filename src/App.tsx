@@ -15,6 +15,9 @@ import {
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { getContentWindow } from "./api";
 import { playAudio } from "./audio";
+import googleLoginImage from "./assets/google-login.png";
+import kakaoIconImage from "./assets/kakao-icon.png";
+import naverLoginImage from "./assets/naver-login.png";
 import type { ContentItem, ContentPage, Progress } from "./types";
 
 const FIRST_PAGE_ID = "A000";
@@ -327,8 +330,8 @@ export function App() {
     return (
       <main className="landing">
         <header className="landing-header">
-          <button className="brand-button" type="button" aria-label="Remember Room">
-            Remember Room
+          <button className="brand-button" type="button" aria-label="기억방 학습기">
+            기억방 학습기
           </button>
           <button className="login-button" type="button" onClick={() => setIsLoginOpen(true)}>
             <LogIn size={16} />
@@ -340,8 +343,8 @@ export function App() {
           {currentPage && <img src={currentPage.imageUrl} alt="" aria-hidden="true" />}
           <div className="landing-shade" />
           <div className="landing-content">
-            <p className="landing-kicker">Remember Room</p>
-            <h1>Remember Room</h1>
+            <p className="landing-kicker">기억방 학습기</p>
+            <h1>기억방 학습기</h1>
             <div className="landing-stats" aria-label="학습 현황">
               <span>A000-A009</span>
               <span>{totalCompletedCount}/100</span>
@@ -399,10 +402,23 @@ export function App() {
                 <X size={18} />
               </button>
               <div className="login-visual">
-                <p>Remember Room</p>
+                <p>기억방 학습기</p>
               </div>
-              <div className="notice" role="status">
-                로그인 기능은 아직 연결되지 않았습니다.
+              <button className="kakao-login" type="button">
+                <img src={kakaoIconImage} alt="" />
+                카카오로 로그인
+              </button>
+              <div className="login-divider">
+                <span>또는</span>
+              </div>
+              <div className="social-login-row" aria-label="다른 로그인">
+                <button type="button" aria-label="네이버 로그인">
+                  <img src={naverLoginImage} alt="" />
+                </button>
+                <span className="social-separator" aria-hidden="true" />
+                <button type="button" aria-label="구글 로그인">
+                  <img src={googleLoginImage} alt="" />
+                </button>
               </div>
             </section>
           </div>
