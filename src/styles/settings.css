@@ -1,0 +1,102 @@
+.learning-config-header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+
+.learning-config-header h2 {
+  color: #111827;
+  font-size: 2rem;
+  margin: 0;
+}
+
+.panel-kicker {
+  color: #6b7280;
+  font-size: 0.82rem;
+  font-weight: 900;
+  margin: 0 0 8px;
+}
+
+.page-chip {
+  background: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  border-radius: 999px;
+  color: #111827;
+  font-weight: 900;
+  padding: 8px 14px;
+}
+
+.learning-option-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.toggle-field,
+.form-field,
+.audio-order-card {
+  color: #111827;
+}
+
+.toggle-field span,
+.form-field span,
+.audio-order-card strong {
+  color: #6b7280;
+  font-size: 0.84rem;
+  font-weight: 900;
+}
+
+.toggle-button {
+  background: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  color: #111827;
+  min-height: 44px;
+  transition:
+    background-color 180ms ease,
+    transform 180ms ease;
+}
+
+.toggle-button--active {
+  background: #111827;
+  border-color: #111827;
+  color: #ffffff;
+}
+
+.form-field input,
+.form-field select {
+  background: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+  color: #111827;
+  min-height: 46px;
+  padding: 0 14px;
+}
+
+.audio-order-card {
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  margin-top: 16px;
+  padding: 18px;
+}
+
+.audio-order-grid {
+  gap: 12px;
+}
+
+.word-card--empty {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  margin-top: 20px;
+  padding: 18px;
+}
+
+.word-card--empty strong {
+  color: #111827;
+}
+
+.word-card--empty p {
+  color: #4b5563;
+}

@@ -1,0 +1,199 @@
+.marketing {
+  background: #ffffff;
+  min-height: 100vh;
+}
+
+.marketing-hero {
+  align-items: center;
+  display: grid;
+  gap: 32px;
+  grid-template-columns: minmax(0, 1.15fr) minmax(360px, 0.85fr);
+  margin: 0 auto;
+  max-width: 1320px;
+  padding: 128px 36px 56px;
+}
+
+.marketing-copy {
+  display: grid;
+  gap: 18px;
+}
+
+.marketing-eyebrow {
+  color: #8b6b1b;
+  font-size: 0.78rem;
+  font-weight: 900;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.marketing-copy h1 {
+  color: #17201b;
+  font-size: clamp(2.7rem, 5vw, 4.8rem);
+  line-height: 0.96;
+  margin: 0;
+  max-width: 760px;
+}
+
+.marketing-copy > p {
+  color: #4b564c;
+  font-size: 1rem;
+  line-height: 1.75;
+  margin: 0;
+  max-width: 640px;
+}
+
+.marketing-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.marketing-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.marketing-badges span {
+  align-items: center;
+  background: #fffefa;
+  border: 1px solid #ddd6c5;
+  border-radius: 999px;
+  color: #405144;
+  display: inline-flex;
+  font-size: 0.84rem;
+  font-weight: 800;
+  min-height: 34px;
+  padding: 0 13px;
+}
+
+.marketing-preview {
+  background: linear-gradient(180deg, #faf6ef 0%, #ebe3d0 100%);
+  border: 1px solid #ddd4c2;
+  border-radius: 18px;
+  min-height: 420px;
+  overflow: hidden;
+  padding: 16px;
+  position: relative;
+}
+
+.marketing-preview__label {
+  align-items: center;
+  background: rgba(23, 32, 27, 0.9);
+  border-radius: 999px;
+  color: #fffefa;
+  display: inline-flex;
+  font-size: 0.82rem;
+  font-weight: 800;
+  left: 24px;
+  min-height: 32px;
+  padding: 0 12px;
+  position: absolute;
+  top: 24px;
+  z-index: 1;
+}
+
+.marketing-preview img {
+  border-radius: 14px;
+  display: block;
+  height: 100%;
+  max-height: 520px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.marketing-section {
+  margin: 0 auto;
+  max-width: 1320px;
+  padding: 0 36px 36px;
+}
+
+.marketing-section--muted {
+  padding-top: 8px;
+}
+
+.marketing-section__header {
+  margin-bottom: 18px;
+}
+
+.marketing-section__header p {
+  color: #7c7f73;
+  font-size: 0.8rem;
+  font-weight: 900;
+  margin: 0 0 8px;
+  text-transform: uppercase;
+}
+
+.marketing-section__header h2 {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  line-height: 1.1;
+  margin: 0;
+  max-width: 760px;
+}
+
+.marketing-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.marketing-grid--sections {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.marketing-card {
+  background: #fffefa;
+  border: 1px solid #ddd6c5;
+  border-radius: 12px;
+  display: grid;
+  gap: 10px;
+  min-height: 180px;
+  padding: 20px;
+}
+
+.marketing-card strong {
+  font-size: 1.14rem;
+  line-height: 1.25;
+}
+
+.marketing-card p,
+.marketing-card span {
+  color: #5d665d;
+  margin: 0;
+}
+
+.marketing-card--section {
+  min-height: 140px;
+}
+
+.marketing-steps {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.marketing-step {
+  background: #ede5d5;
+  border-radius: 12px;
+  display: grid;
+  gap: 12px;
+  min-height: 150px;
+  padding: 20px;
+}
+
+.marketing-step span {
+  color: #8d7538;
+  font-size: 0.84rem;
+  font-weight: 900;
+}
+
+.marketing-step p {
+  color: #253129;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.marketing-notice {
+  margin-bottom: 0;
+  max-width: 1248px;
+}

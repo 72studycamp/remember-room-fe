@@ -1,0 +1,108 @@
+@media (max-width: 1080px) {
+  .marketing-hero,
+  .marketing-grid,
+  .marketing-grid--sections,
+  .marketing-steps,
+  .board-page__layout {
+    grid-template-columns: 1fr;
+  }
+
+  .workspace {
+    grid-template-columns: 1fr;
+  }
+
+  .section-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .setting-row {
+    grid-template-columns: 1fr;
+  }
+
+  .audio-order-grid,
+  .transport-controls {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 680px) {
+  .app {
+    padding: 18px;
+  }
+
+  .site-header {
+    padding: 0 20px;
+  }
+
+  .site-nav {
+    display: none;
+  }
+
+  .site-header__actions {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 8px;
+  }
+  .site-header__actions .ghost-button,
+  .site-header__actions .login-button {
+    width: 120px;
+    justify-content: center;
+  }
+
+  .marketing-hero,
+  .marketing-section,
+  .board-page {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .marketing-hero {
+    padding-top: 112px;
+  }
+
+  .marketing-preview {
+    min-height: 320px;
+  }
+
+  .landing-hero {
+    min-height: 68vh;
+    padding: 84px 24px 36px;
+  }
+
+  .landing-content h1 {
+    font-size: 3.2rem;
+  }
+
+  .section-browser {
+    padding: 32px 18px 52px;
+  }
+
+  .section-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .setting-control {
+    grid-template-columns: 30px minmax(0, 1fr) 30px;
+  }
+
+  .login-panel {
+    min-height: 520px;
+  }
+
+  .login-visual {
+    min-height: 250px;
+  }
+
+  .landing-notice {
+    bottom: 16px;
+    left: 24px;
+    right: 24px;
+  }
+
+  .audio-actions,
+  .nav-actions,
+  .learning-meta-grid {
+    grid-template-columns: 1fr;
+  }
+}

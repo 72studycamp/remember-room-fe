@@ -1,4 +1,11 @@
-import type { ContentPage, HealthResponse } from "./types";
+import type {
+  ContentPage,
+  CreateLearningSessionPayload,
+  HealthResponse,
+  KakaoExchangeResponse,
+  KakaoLoginUrlResponse,
+  LearningSession
+} from "./types";
 
 const RAW_API_BASE_URL = normalizeBaseUrl(import.meta.env.VITE_API_BASE_URL);
 const API_BASE_URL = shouldUseDirectBackend(RAW_API_BASE_URL) ? RAW_API_BASE_URL : "";
@@ -52,6 +59,35 @@ function normalizeContentPage(page: ContentPage): ContentPage {
   };
 }
 
+function normalizeLearningSession(session: LearningSession): LearningSession {
+  const normalizedSteps = session.steps.map((step) => ({
+    ...step,
+    audio: {
+      koreanUrl: toProxyableUrl(step.audio.koreanUrl),
+      englishUrl: toProxyableUrl(step.audio.englishUrl),
+      memoryUrl: toProxyableUrl(step.audio.memoryUrl)
+    },
+    playQueue: step.playQueue.map((queueItem) => ({
+      ...queueItem,
+      url: toProxyableUrl(queueItem.url)
+    }))
+  }));
+  const anchorStep = normalizedSteps.find((step) => step.itemIndex === 0);
+  const remainingSteps = normalizedSteps.filter((step) => step.itemIndex !== 0);
+  const orderedSteps = anchorStep
+    ? [anchorStep, ...remainingSteps].map((step, index) => ({
+        ...step,
+        position: index + 1
+      }))
+    : normalizedSteps;
+
+  return {
+    ...session,
+    imageUrl: toProxyableUrl(session.imageUrl),
+    steps: orderedSteps
+  };
+}
+
 async function request<T>(path: string, init?: RequestInit): Promise<T> {
   const response = await fetch(`${API_BASE_URL}${path}`, {
     ...init,
@@ -77,4 +113,22 @@ export function getContentWindow(pageId: string, forward = 1) {
   return request<ContentPage[]>(`/api/content/pages/${pageId}/window?forward=${forward}`).then((pages) =>
     pages.map(normalizeContentPage)
   );
+}
+
+export function getKakaoLoginUrl() {
+  return request<KakaoLoginUrlResponse>("/api/auth/kakao/login-url");
+}
+
+export function exchangeKakaoCode(code: string) {
+  return request<KakaoExchangeResponse>("/api/auth/kakao/exchange", {
+    method: "POST",
+    body: JSON.stringify({ code })
+  });
+}
+
+export function createLearningSession(payload: CreateLearningSessionPayload) {
+  return request<LearningSession>("/api/learning/sessions", {
+    method: "POST",
+    body: JSON.stringify(payload)
+  }).then(normalizeLearningSession);
 }

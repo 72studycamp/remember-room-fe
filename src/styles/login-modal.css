@@ -1,0 +1,177 @@
+.login-backdrop {
+  align-items: center;
+  animation: backdrop-fade 180ms ease-out;
+  background: rgba(23, 32, 27, 0.44);
+  backdrop-filter: blur(4px);
+  display: flex;
+  inset: 0;
+  justify-content: center;
+  padding: 24px;
+  position: fixed;
+  z-index: 10;
+}
+
+.login-panel {
+  background: #fffefa;
+  border: 1px solid #e4e8ef;
+  border-radius: 18px;
+  box-shadow: 0 24px 80px rgba(23, 32, 27, 0.22);
+  animation: modal-rise 220ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  max-width: 390px;
+  min-height: 500px;
+  padding: 30px 28px;
+  position: relative;
+  width: min(100%, 390px);
+}
+
+.login-close {
+  align-items: center;
+  background: #f5f4f0;
+  border: 0;
+  border-radius: 999px;
+  color: #17201b;
+  cursor: pointer;
+  display: inline-flex;
+  height: 34px;
+  justify-content: center;
+  position: absolute;
+  right: 18px;
+  top: 18px;
+  transition:
+    background 160ms ease,
+    transform 160ms ease;
+  width: 34px;
+}
+
+.login-close:hover {
+  background: #ece9df;
+  transform: rotate(90deg);
+}
+
+.login-visual {
+  display: grid;
+  justify-items: center;
+  min-height: 220px;
+  padding-top: 108px;
+  text-align: center;
+}
+
+.login-visual p {
+  color: #383838;
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0;
+  margin: 0 0 8px;
+  text-transform: uppercase;
+}
+
+.kakao-login {
+  align-items: center;
+  background: #fee500;
+  border: 0;
+  border-radius: 12px;
+  color: #171717;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 0.98rem;
+  font-weight: 900;
+  gap: 8px;
+  justify-content: center;
+  min-height: 48px;
+  transition:
+    filter 160ms ease,
+    transform 160ms ease;
+  width: 100%;
+}
+
+.kakao-login:hover {
+  filter: brightness(0.98);
+  transform: translateY(-1px);
+}
+
+.kakao-login img {
+  height: 18px;
+  width: 18px;
+}
+
+.login-divider {
+  align-items: center;
+  color: #a5a7ad;
+  display: flex;
+  font-size: 0.78rem;
+  font-weight: 700;
+  gap: 12px;
+  margin: 18px 0 0;
+}
+
+.login-divider::before,
+.login-divider::after {
+  background: #e3e4e8;
+  content: "";
+  flex: 1;
+  height: 1px;
+}
+
+.social-login-row {
+  align-items: center;
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.social-login-row button {
+  align-items: center;
+  background: #fff;
+  border: 1px solid #d7dbe2;
+  border-radius: 999px;
+  cursor: pointer;
+  display: inline-flex;
+  height: 46px;
+  justify-content: center;
+  transition:
+    border-color 160ms ease,
+    transform 160ms ease,
+    box-shadow 160ms ease;
+  width: 46px;
+}
+
+.social-login-row button:hover {
+  border-color: #b9c0ca;
+  box-shadow: 0 10px 24px rgba(23, 32, 27, 0.1);
+  transform: translateY(-2px);
+}
+
+.social-login-row img {
+  display: block;
+  height: 27px;
+  object-fit: contain;
+  width: 27px;
+}
+
+.social-separator {
+  background: #e1e3e8;
+  display: inline-block;
+  height: 24px;
+  width: 1px;
+}
+
+@keyframes backdrop-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modal-rise {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}

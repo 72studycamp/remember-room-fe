@@ -1,0 +1,122 @@
+.landing {
+  background: #f7f7f7;
+  min-height: 100vh;
+  position: relative;
+}
+
+.site-header {
+  align-items: center;
+  display: grid;
+  grid-template-columns: 180px auto 1fr;
+  column-gap: 36px;
+
+  height: 68px;
+  padding: 0 36px;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+
+  background: #ffffff;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.site-header__actions {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.site-header__actions .login-button {
+  white-space: nowrap;
+}
+
+.site-nav {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+  justify-content: flex-start;
+}
+
+.site-nav__item {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  border-radius: 999px;
+  color: #777777;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 0.88rem;
+  font-weight: 800;
+  justify-content: center;
+  line-height: 1;
+  min-height: 36px;
+  padding: 0 14px;
+}
+
+.site-nav__item--active {
+  background: #111111;
+  color: #ffffff;
+}
+
+.brand-button,
+.login-button {
+  align-items: center;
+  border: 0;
+  cursor: pointer;
+  display: inline-flex;
+  font-weight: 800;
+}
+
+.brand-button {
+  background: transparent;
+  color: #555555;
+  font-size: 0.95rem;
+}
+
+.login-button {
+  background: #111111;
+  border: 1px solid #111111;
+  border-radius: 999px;
+  color: #ffffff;
+  gap: 7px;
+  justify-content: center;
+  min-height: 38px;
+  padding: 0 16px;
+  white-space: nowrap;
+}
+
+.primary-button,
+.ghost-button {
+  align-items: center;
+  border-radius: 999px;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 0.92rem;
+  font-weight: 800;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 18px;
+}
+
+.primary-button {
+  background: #111111;
+  border: 1px solid #111111;
+  color: #ffffff;
+}
+
+.ghost-button {
+  background: #ffffff;
+  border: 1px solid #d8d8d8;
+  color: #333333;
+}
+
+.ghost-button--light {
+  background: #ffffff;
+  border: 1px solid #d8d8d8;
+  color: #333333;
+}

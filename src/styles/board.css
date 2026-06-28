@@ -1,0 +1,110 @@
+.board-shell {
+  background: #ffffff;
+  min-height: 100vh;
+}
+
+.board-page {
+  margin: 0 auto;
+  max-width: 1320px;
+  padding: 112px 36px 56px;
+}
+
+.board-page__hero {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 22px;
+}
+
+.board-page__hero p {
+  color: #484848;
+  font-size: 0.82rem;
+  font-weight: 900;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.board-page__hero h1 {
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  margin: 0;
+}
+
+.board-page__hero span {
+  color: #5d665d;
+}
+
+.board-page__layout {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: 240px minmax(0, 1fr);
+}
+
+.board-sidebar,
+.board-placeholder {
+  background: #fafafa;
+  border: 1px solid #ffffff;
+  border-radius: 12px;
+}
+
+.board-sidebar {
+  padding: 18px;
+}
+
+.board-sidebar strong {
+  display: block;
+  font-size: 0.96rem;
+  margin-bottom: 14px;
+}
+
+.board-sidebar ul {
+  display: grid;
+  gap: 10px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.board-sidebar li {
+  color: #4c5a4f;
+  font-weight: 700;
+}
+
+.board-placeholder {
+  min-height: 420px;
+  padding: 18px;
+}
+
+.board-placeholder__toolbar {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.board-placeholder__toolbar span {
+  font-weight: 800;
+}
+
+.board-placeholder__toolbar button {
+  background: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 999px;
+  color: #7c7f73;
+  min-height: 36px;
+  padding: 0 14px;
+}
+
+.board-placeholder__empty {
+  border: 1px dashed #d5cebf;
+  border-radius: 10px;
+  display: grid;
+  gap: 8px;
+  min-height: 300px;
+  padding: 24px;
+  place-content: center;
+  text-align: center;
+}
+
+.board-placeholder__empty p,
+.board-placeholder__empty strong {
+  margin: 0;
+}

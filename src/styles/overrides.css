@@ -1,0 +1,147 @@
+:root {
+  font-size: 14px;
+}
+
+.app {
+  min-height: 100vh;
+  padding: 16px;
+}
+
+h1 {
+  font-size: clamp(1.14rem, 1.65vw, 1.65rem);
+}
+
+.page-title-button {
+  margin: 0 0 7px;
+}
+
+.workspace {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  margin: 0 auto;
+}
+
+.image-shell {
+  aspect-ratio: 640 / 460;
+  max-height: 520px;
+}
+
+.study-panel {
+  gap: 10px;
+}
+
+.item-index {
+  height: 34px;
+  min-width: 34px;
+  padding: 0 9px;
+}
+
+.marker {
+  font-size: 0.72rem;
+  height: 26px;
+  min-width: 26px;
+  padding: 0 5px;
+}
+
+.learning-focus {
+  font-size: 0.84rem;
+  height: 38px;
+  min-width: 38px;
+}
+
+.mode-panel {
+  max-width: 860px;
+}
+
+/* title badges */
+.word-subtitle-row {
+  align-items: center;
+  display: flex;
+  gap: 6px;
+  min-width: 0;
+}
+
+.word-subtitle-row p {
+  margin: 4px 0 0;
+}
+
+.word-title-badges {
+  align-items: center;
+  display: flex;
+  gap: 3px;
+  margin-top: 4px;
+}
+
+.word-title-badges span {
+  align-items: center;
+  background: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  border-radius: 999px;
+  color: #6b7280;
+  display: inline-flex;
+  font-size: 0.58rem;
+  font-weight: 800;
+  justify-content: center;
+  line-height: 1;
+  min-height: 16px;
+  padding: 0 5px;
+  white-space: nowrap;
+}
+
+/* landing progress rainbow */
+.landing .summary-progress {
+  background: #e5e7eb;
+  border-radius: 999px;
+  height: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.landing .summary-progress span {
+  display: block;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    #2563eb 0%,
+    #06b6d4 20%,
+    #22c55e 40%,
+    #eab308 65%,
+    #f97316 82%,
+    #ef4444 100%
+  );
+  background-size: calc(10000% / var(--progress-percent, 100)) 100%;
+  background-position: left center;
+}
+
+/* responsive safety */
+@media (max-width: 1080px) {
+  .workspace {
+    grid-template-columns: 1fr;
+    max-width: 760px;
+  }
+
+  .image-shell {
+    max-height: none;
+  }
+
+  .audio-order-grid,
+  .transport-controls {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 680px) {
+  .app {
+    padding: 14px;
+  }
+
+  .workspace,
+  .notice {
+    max-width: 100%;
+  }
+
+  .image-shell {
+    max-height: none;
+  }
+}
